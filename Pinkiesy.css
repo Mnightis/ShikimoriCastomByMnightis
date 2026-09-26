@@ -581,3 +581,101 @@ input:focus, select:focus, textarea:focus { background-color: #2a2a2a !important
 .b-tooltipped:not(a) { color: #ffb6c1; }
 .b-nothing_here { color: #ff1493; }
 ::selection { background: #ff1493; color: white; }
+/* ============================================
+   ФИКС v13 — "ПРОСМОТРЕНО" / "ЭПИЗОДЫ" / "ВРЕМЯ" РОЗОВЫЕ
+   ============================================ */
+
+/* Просмотрено */
+.b-user_rate .status,
+.b-user_rate .status *,
+.f-user .b-user_rate .status,
+.f-user .b-user_rate .status *,
+.fc-user-sections .b-user_rate .status,
+.fc-user-sections .b-user_rate .status *,
+.p-dashboards-show .v2 .my-list .status,
+.p-dashboards-show .v2 .my-list .status *,
+body#dashboards_show .fc-user-sections .b-user_rate .status,
+body#dashboards_show .fc-user-sections .b-user_rate .status * {
+    color: #ff69b4 !important;
+    font-weight: 700 !important;
+    background: transparent !important;
+}
+
+/* Эпизоды (13 / 14) */
+.b-user_rate .episodes,
+.b-user_rate .episodes *,
+.b-user_rate .episodes_total,
+.b-user_rate .episodes_total *,
+.b-user_rate span.episodes_total,
+.f-user .b-user_rate .episodes,
+.f-user .b-user_rate .episodes *,
+.f-user .b-user_rate .episodes_total,
+.f-user .b-user_rate .episodes_total *,
+.fc-user-sections .b-user_rate .episodes,
+.fc-user-sections .b-user_rate .episodes *,
+.fc-user-sections .b-user_rate .episodes_total,
+.fc-user-sections .b-user_rate .episodes_total *,
+.p-dashboards-show .v2 .my-list .episodes,
+.p-dashboards-show .v2 .my-list .episodes *,
+.p-dashboards-show .v2 .my-list .episodes_total,
+.p-dashboards-show .v2 .my-list .episodes_total *,
+body#dashboards_show .fc-user-sections .b-user_rate .episodes,
+body#dashboards_show .fc-user-sections .b-user_rate .episodes *,
+body#dashboards_show .fc-user-sections .b-user_rate .episodes_total,
+body#dashboards_show .fc-user-sections .b-user_rate .episodes_total * {
+    color: #ff69b4 !important;
+    font-weight: 700 !important;
+    background: transparent !important;
+}
+
+/* Время (3 часа назад) */
+.b-user_rate .time,
+.b-user_rate .time *,
+.b-user_rate .misc.date,
+.b-user_rate .misc.date *,
+.b-user_rate time,
+.b-user_rate time *,
+.f-user .b-user_rate .time,
+.f-user .b-user_rate .time *,
+.f-user .b-user_rate time,
+.f-user .b-user_rate time *,
+.fc-user-sections .b-user_rate .time,
+.fc-user-sections .b-user_rate .time *,
+.fc-user-sections .b-user_rate time,
+.fc-user-sections .b-user_rate time *,
+.p-dashboards-show .v2 .my-list .time,
+.p-dashboards-show .v2 .my-list .time *,
+.p-dashboards-show .v2 .my-list time,
+.p-dashboards-show .v2 .my-list time *,
+body#dashboards_show .fc-user-sections .b-user_rate time,
+body#dashboards_show .fc-user-sections .b-user_rate time * {
+    color: #ffb6c1 !important;
+    background: transparent !important;
+}
+
+/* Убиваем возможные тёмные/серые/синие стили на любых span внутри карточки */
+body#dashboards_show .fc-user-sections .b-user_rate span,
+body#dashboards_show .fc-user-sections .b-user_rate div,
+body#dashboards_show .fc-user-sections .b-user_rate p,
+body#dashboards_show .fc-user-sections .b-user_rate a:not(.name),
+.fc-user-sections .b-user_rate span,
+.fc-user-sections .b-user_rate div,
+.p-dashboards-show .v2 .my-list span,
+.p-dashboards-show .v2 .my-list div {
+    color: #ffb6c1 !important;
+    background: transparent !important;
+}
+
+/* Название и звёзды — ярче */
+body#dashboards_show .fc-user-sections .b-user_rate .name,
+body#dashboards_show .fc-user-sections .b-user_rate .name a,
+body#dashboards_show .fc-user-sections .b-user_rate a.name {
+    color: #ff1493 !important;
+    font-weight: 700 !important;
+}
+body#dashboards_show .fc-user-sections .b-user_rate .stars,
+body#dashboards_show .fc-user-sections .b-user_rate .star,
+body#dashboards_show .fc-user-sections .b-user_rate .score {
+    color: #ff1493 !important;
+    fill: #ff1493 !important;
+}
